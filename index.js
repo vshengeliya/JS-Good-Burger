@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
    BASE_URL = "http://localhost:3000/burgers"
 
-   
    const menu = document.getElementById('burger-menu')
    fetch(BASE_URL)
    .then(resp => resp.json())
    .then(burgers => burgers.forEach(addBurger))
    
-
   const ul = document.getElementById('order-list')
   
   function addBurger(burger){
@@ -20,9 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </p>
     <button id= ${burger.id} class="button">Add to Order</button>
     </div>`
-
   }
-
   menu.addEventListener("click", function(event){
     let li = document.createElement('li')
        li = document.createElement('li')
@@ -52,13 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 //fetch
 
-
     })//fromlistener
       
-
-
-  
-
-  
-
 })//DOM
